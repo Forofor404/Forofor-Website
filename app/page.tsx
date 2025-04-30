@@ -6,86 +6,40 @@ import { Button } from "@/components/ui/button"
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <div className="flex min-h-screen flex-col bg-[#121212]">
+      <header className="sticky top-0 z-40 border-b border-[#00f5d5] bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-[0_0_20px_#00f5d5]">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-[#00f5d5]">forofor</span>
+            <Image src="/logos/FOROFOR_LOGO_-07.svg" alt="Forofor Logo" width={200} height={200} />
           </div>
           <nav className="hidden md:flex gap-6">
-            <Link href="#services" className="text-sm font-medium hover:text-[#00f5d5] transition-colors">
-              Services
-            </Link>
-            <Link href="#work" className="text-sm font-medium hover:text-[#00f5d5] transition-colors">
-              Work
-            </Link>
-            <Link href="#about" className="text-sm font-medium hover:text-[#00f5d5] transition-colors">
-              About
-            </Link>
-            <Link href="#testimonials" className="text-sm font-medium hover:text-[#00f5d5] transition-colors">
-              Testimonials
-            </Link>
-            <Link href="#contact" className="text-sm font-medium hover:text-[#00f5d5] transition-colors">
-              Contact
-            </Link>
+            <Link className="text-sm font-medium hover:text-[#00f5d5] transition-colors" href="#services">Services</Link>
+            <Link className="text-sm font-medium hover:text-[#00f5d5] transition-colors" href="#work">Work</Link>
+            <Link className="text-sm font-medium hover:text-[#00f5d5] transition-colors" href="#about">About</Link>
+            <Link className="text-sm font-medium hover:text-[#00f5d5] transition-colors" href="#testimonials">Testimonials</Link>
+            <Link className="text-sm font-medium hover:text-[#00f5d5] transition-colors" href="#contact">Contact</Link>
           </nav>
-          <Button className="hidden md:inline-flex bg-[#00f5d5] text-[#121212] hover:bg-[#00f5d5]/80">
-            Get Started
-          </Button>
-          <Button variant="ghost" size="icon" className="md:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-6 w-6"
-            >
-              <line x1="4" x2="20" y1="12" y2="12" />
-              <line x1="4" x2="20" y1="6" y2="6" />
-              <line x1="4" x2="20" y1="18" y2="18" />
-            </svg>
-          </Button>
+          <Button className="hidden md:inline-flex bg-[#00f5d5] text-[#121212] hover:bg-[#00f5d5]/80 hover:shadow-[0_0_20px_#00f5d5] rounded-none">Get Started</Button>
         </div>
       </header>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-[#121212] text-[#f4f4f4]">
+        <section className="w-full py-12 md:py-32 lg:py-48 bg-[#121212] text-[#f4f4f4]">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
               <div className="flex flex-col justify-center space-y-4">
-                <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                    We Build Digital <span className="text-[#00f5d5]">Experiences</span> That Matter
-                  </h1>
-                  <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                    forofor is a digital agency specializing in creating stunning websites, powerful applications, and
-                    memorable brands.
-                  </p>
+                <div className="space-y-2 my-8">
+                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">Fill the Void<span className="text-[#00f5d5] animate-pulse">▮</span></h1>
+                  <p className="max-w-[600px] text-muted-foreground md:text-xl">We create. We automate. We host. We make your “Where did it go?” moments a thing of the past.</p>
                 </div>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button className="bg-[#00f5d5] text-[#121212] hover:bg-[#00f5d5]/80">
-                    Get Started
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                  <Button variant="outline" className="border-[#f4f4f4] text-[#f4f4f4] hover:bg-[#f4f4f4]/10">
-                    Our Work
-                  </Button>
+                <div className="flex flex-col gap-4 min-[400px]:flex-row">
+                  <Button className="border-[#f4f4f4] text-[#121212] hover:text-[#f4f4f4] hover:bg-[#f4f4f4]/10 hover:shadow-[0_0_10px_#00f5d5] rounded-none" variant="outline">Our Work</Button>
+                  <Button className="bg-[#00f5d5] text-[#121212] hover:bg-[#00f5d5]/80 hover:shadow-[0_0_20px_#00f5d5] rounded-none">Get Started<ArrowRight className="ml-2 h-4 w-4" /></Button>
                 </div>
               </div>
               <div className="flex items-center justify-center">
                 <div className="relative h-[350px] w-[350px] md:h-[450px] md:w-[450px]">
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#00f5d5] to-transparent opacity-30 blur-3xl"></div>
-                  <Image
-                    src="/placeholder.svg?height=450&width=450"
-                    alt="Hero Image"
-                    width={450}
-                    height={450}
-                    className="relative z-10"
-                  />
+                  <Image src="/logos/FOROFOR_LOGO_-11.svg" alt="Hero Image" width={450} height={450} className="relative z-10" />
                 </div>
               </div>
             </div>
@@ -410,26 +364,13 @@ export default function Home() {
       <footer className="w-full border-t bg-[#121212] py-6 text-[#f4f4f4]">
         <div className="container flex flex-col items-center justify-between gap-4 px-4 md:flex-row md:px-6">
           <div className="flex items-center gap-2">
-            <span className="text-xl font-bold text-[#00f5d5]">forofor</span>
+            <Image src="/logos/FOROFOR_LOGO_-02.svg" alt="Forofor Logo" width={200} height={200} />
           </div>
-          <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-            © 2023 forofor. All rights reserved.
-          </p>
+          <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">© 2024 Forofor. All rights reserved.</p>
           <div className="flex gap-4">
             <Link href="#" className="text-[#f4f4f4] hover:text-[#00f5d5]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="h-5 w-5"
-              >
-                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
               </svg>
               <span className="sr-only">Twitter</span>
             </Link>
