@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Code, Globe, Layers, Mail, MessageSquare, Phone, Zap } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 
@@ -13,9 +13,9 @@ export default function Home() {
             <Image src="/logos/FOROFOR_LOGO_-07.svg" alt="Forofor Logo" width={200} height={200} />
           </div>
           <nav className="hidden md:flex gap-6">
-            <Link className="text-sm font-medium hover:text-[#00f5d5] transition-colors" href="#services">Services</Link>
-            <Link className="text-sm font-medium hover:text-[#00f5d5] transition-colors" href="#work">Work</Link>
             <Link className="text-sm font-medium hover:text-[#00f5d5] transition-colors" href="#about">About</Link>
+            <Link className="text-sm font-medium hover:text-[#00f5d5] transition-colors" href="#services">Services</Link>
+            <Link className="text-sm font-medium hover:text-[#00f5d5] transition-colors" href="#work">Portfolio</Link>
             <Link className="text-sm font-medium hover:text-[#00f5d5] transition-colors" href="#testimonials">Testimonials</Link>
             <Link className="text-sm font-medium hover:text-[#00f5d5] transition-colors" href="#contact">Contact</Link>
           </nav>
@@ -32,7 +32,7 @@ export default function Home() {
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">We create. We automate. We host. We make your “Where did it go?” moments a thing of the past.</p>
                 </div>
                 <div className="flex flex-col gap-4 min-[400px]:flex-row">
-                  <Button className="border-[#f4f4f4] text-[#121212] hover:text-[#f4f4f4] hover:bg-[#f4f4f4]/10 hover:shadow-[0_0_10px_#00f5d5] rounded-none" variant="outline">Our Work</Button>
+                  <Button className="bg-[#f4f4f4] border-[#f4f4f4] text-[#121212] hover:text-[#f4f4f4] hover:bg-[#f4f4f4]/10 hover:shadow-[0_0_10px_#00f5d5] rounded-none" variant="outline">Our Work</Button>
                   <Button className="bg-[#00f5d5] text-[#121212] hover:bg-[#00f5d5]/80 hover:shadow-[0_0_20px_#00f5d5] rounded-none">Get Started<ArrowRight className="ml-2 h-4 w-4" /></Button>
                 </div>
               </div>
@@ -46,154 +46,118 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-[#f4f4f4]">
+        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-[#f4f4f4]">
           <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-[#00f5d5] px-3 py-1 text-sm text-[#121212] font-medium">
-                  Services
+            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 lg:">
+              <div className="flex flex-col justify-center space-y-4">
+                <div className="space-y-2">
+                  <div className="inline-block bg-[#00f5d5] px-3 py-1 text-sm text-[#121212] font-medium hover:shadow-[0_0_10px_#00f5d5] mb-8">About Us</div>
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#121212]">The Crew Behind the Code.</h2>
+                  <p className="max-w-[600px] text-[#121212]/70 md:text-xl/relaxed">Forofor was founded in 2024 in Lebanon with a simple mission: turn digital chaos into clarity. Behind every line of code and pixel-perfect design is a tight-knit team that lives for solving problems and does it with precision, creativity, and just the right amount of caffeine.</p>
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-[#121212]">What We Offer</h2>
-                <p className="max-w-[900px] text-[#121212]/70 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  We provide end-to-end digital solutions to help your business thrive in the digital landscape.
-                </p>
+                <div className="flex flex-col gap-2 min-[800px]:flex-row">
+                  <Button className="bg-[#00f5d5] text-[#121212] hover:bg-[#00f5d5]/80 hover:shadow-[0_0_20px_#00f5d5] rounded-none">Meet the humans</Button>
+                  <Button className="bg-[#121212] border-[#121212] text-[#f4f4f4] hover:text-[#121212] hover:bg-[#121212]/10 hover:shadow-[0_0_10px_#00f5d5] rounded-none" variant="outline">Learn how we build (and why it works)</Button>
+                </div>
               </div>
-            </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3">
-              <div className="rounded-lg border bg-white p-6 shadow-sm transition-all hover:shadow-md hover:border-[#00f5d5]">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#00f5d5]/10">
-                  <Globe className="h-6 w-6 text-[#00f5d5]" />
+              <div className="flex items-center justify-center">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="overflow-hidden">
+                    <Image src="/logos/FOROFOR_LOGO_-11.svg" alt="Team at work" width={300} height={300} className="aspect-square object-cover"/>
+                  </div>
+                  <div className="overflow-hidden">
+                    <Image src="/logos/FOROFOR_LOGO_-09.svg" alt="Office space" width={300} height={300} className="aspect-square object-cover"/>
+                  </div>
+                  <div className="overflow-hidden">
+                    <Image src="/logos/FOROFOR_LOGO_-09.svg" alt="Team meeting" width={300} height={300} className="aspect-square object-cover"/>
+                  </div>
+                  <div className="overflow-hidden">
+                    <Image src="/logos/FOROFOR_LOGO_-11.svg" alt="Design process" width={300} height={300} className="aspect-square object-cover"/>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-[#121212]">Web Development</h3>
-                <p className="mt-2 text-[#121212]/70">
-                  Custom websites built with the latest technologies to deliver exceptional user experiences.
-                </p>
-              </div>
-              <div className="rounded-lg border bg-white p-6 shadow-sm transition-all hover:shadow-md hover:border-[#00f5d5]">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#00f5d5]/10">
-                  <Layers className="h-6 w-6 text-[#00f5d5]" />
-                </div>
-                <h3 className="text-xl font-bold text-[#121212]">UI/UX Design</h3>
-                <p className="mt-2 text-[#121212]/70">
-                  Intuitive and engaging user interfaces that enhance user experience and drive conversions.
-                </p>
-              </div>
-              <div className="rounded-lg border bg-white p-6 shadow-sm transition-all hover:shadow-md hover:border-[#00f5d5]">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#00f5d5]/10">
-                  <Code className="h-6 w-6 text-[#00f5d5]" />
-                </div>
-                <h3 className="text-xl font-bold text-[#121212]">App Development</h3>
-                <p className="mt-2 text-[#121212]/70">
-                  Native and cross-platform mobile applications that deliver seamless experiences.
-                </p>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="work" className="w-full py-12 md:py-24 lg:py-32 bg-[#121212] text-[#f4f4f4]">
+        <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-[#121212]">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-[#00f5d5] px-3 py-1 text-sm text-[#121212] font-medium">
-                  Portfolio
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Our Recent Work</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Check out some of our latest projects and see how we've helped our clients achieve their goals.
-                </p>
+                <div className="inline-block bg-[#00f5d5] px-3 py-1 text-sm text-[#121212] font-medium hover:shadow-[0_0_10px_#00f5d5] mb-8">Services</div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-[#f4f4f4]">What We Ship</h2>
+                <p className="max-w-[900px] text-[#f4f4f4]/70 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">No fluff. Just digital builds that work.<br></br>From zero to launch without a single 404.</p>
+              </div>
+            </div>
+            <div className="mx-auto grid grid-cols-1 max-w-5xl items-center gap-8 py-16">
+              <div className="border p-6 transition-all border-[#00f5d5] shadow-[0_0_10px_#00f5d5] hover:shadow-[5px_5px_30px_#00f5d5]">
+                <h3 className="text-xl font-bold text-[#f4f4f4]">UI/UX Design</h3>
+                <p className="mt-2 text-[#00f5d5]">We don't guess what looks good — we engineer experiences that users love and can't stop clicking.</p>
+                <p className="mt-4 text-[#f4f4f4]/70"> From wireframes to high-fidelity magic, we obsess over every pixel and micro-interaction. Expect intuitive, beautiful designs that guide your users exactly where you want them — without the rage clicks.</p>
+              </div>
+              <div className="border p-6 transition-all border-[#00f5d5] shadow-[0_0_10px_#00f5d5] hover:shadow-[0_0_30px_#00f5d5]">
+                <h3 className="text-xl font-bold text-[#f4f4f4]">Web Development</h3>
+                <p className="mt-2 text-[#00f5d5]">Not your average “looks fine on desktop” builds.</p>
+                <p className="mt-4 text-[#f4f4f4]/70"> We craft web platforms that are lightning-fast, fully responsive, and built to scale without breaking a sweat. Think custom code that's clean, optimized, and doesn't mysteriously crash when traffic spikes.</p>
+              </div>
+              <div className="border p-6 transition-all border-[#00f5d5] shadow-[0_0_10px_#00f5d5] hover:shadow-[0_0_30px_#00f5d5]">
+                <h3 className="text-xl font-bold text-[#f4f4f4]">App Development</h3>
+                <p className="mt-2 text-[#00f5d5]">The world's gone mobile — and so should you.</p>
+                <p className="mt-2 text-[#f4f4f4]/70">We build apps that glide like butter, stay rock-solid under pressure, and deliver top-tier experiences across iOS and Android. Whether you need a native powerhouse or a cross-platform beast, we've got the keys.</p>
+              </div>
+              <div className="border p-6 transition-all border-[#00f5d5] shadow-[0_0_10px_#00f5d5] hover:shadow-[0_0_30px_#00f5d5]">
+                <h3 className="text-xl font-bold text-[#f4f4f4]">Admin Interfaces</h3>
+                <p className="mt-2 text-[#00f5d5]">Let's be real: most admin dashboards are ugly, clunky, and a pain to use. Not here.</p>
+                <p className="mt-2 text-[#f4f4f4]/70">We build sleek, no-nonsense control panels that make managing your business feel good. Fast-loading, foolproof, and powerful enough to make your team say: “Wait, that's it? That was easy.”</p>
+              </div>
+              <div className="border p-6 transition-all border-[#00f5d5] shadow-[0_0_10px_#00f5d5] hover:shadow-[0_0_30px_#00f5d5]">
+                <h3 className="text-xl font-bold text-[#f4f4f4]">Cloud Setup & Management</h3>
+                <p className="mt-2 text-[#00f5d5]">Cloud isn't magic. It's just tech — and we make it work for you.</p>
+                <p className="mt-2 text-[#f4f4f4]/70">We handle everything from server setup to scaling strategies, backups, and bulletproof security. Whether you're launching your first app or juggling a fleet of services, we keep your infrastructure smooth, secure, and stress-free.</p>
+              </div>
+              <div className="border p-6 transition-all border-[#00f5d5] shadow-[0_0_10px_#00f5d5] hover:shadow-[0_0_30px_#00f5d5]">
+                <h3 className="text-xl font-bold text-[#f4f4f4]">Domain Hosting</h3>
+                <p className="mt-2 text-[#00f5d5]">Your online home deserves a solid foundation.</p>
+                <p className="mt-2 text-[#f4f4f4]/70">We register, manage, and host your domain with the same precision we bring to everything else. Reliable, fast, and fully secured — because if your site's down, your business is too. And we don't let that happen.</p>
+              </div>
+              <div className="border p-6 transition-all border-[#00f5d5] shadow-[0_0_10px_#00f5d5] hover:shadow-[0_0_30px_#00f5d5]">
+                <h3 className="text-xl font-bold text-[#f4f4f4]">Email Hosting</h3>
+                <p className="mt-2 text-[#00f5d5]">If your emails aren't landing, your deals aren't closing.</p>
+                <p className="mt-2 text-[#f4f4f4]/70">We run robust, enterprise-grade email hosting with ironclad deliverability. No more missed messages, no more support tickets that “mysteriously disappeared.” Fully managed, fully secured — and always landing in the inbox.</p>
+              </div>
+              <div className="border p-6 transition-all border-[#00f5d5] shadow-[0_0_10px_#00f5d5] hover:shadow-[0_0_30px_#00f5d5]">
+                <h3 className="text-xl font-bold text-[#f4f4f4]">Secure Code Reviews</h3>
+                <p className="mt-2 text-[#00f5d5]">We love breaking things — before the bad guys do.</p>
+                <p className="mt-2 text-[#f4f4f4]/70">Our security team digs deep into your codebase, hunting for vulnerabilities and patching them fast. Whether it's a new build or legacy code held together with duct tape, we've got eyes on it. Because your reputation (and data) deserves the best defense.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="work" className="w-full py-12 md:py-24 lg:py-32 bg-[#f4f4f4] text-[#121212]">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block bg-[#00f5d5] px-3 py-1 text-sm text-[#121212] font-medium hover:shadow-[0_0_10px_#00f5d5] mb-8">Portfolio</div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Work We're Proud Of</h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">Every project here tells a story. We're lucky to collaborate with incredible clients who trust us to bring their visions to life — and we don't take that lightly.</p>
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
-              {[1, 2, 3, 4, 5, 6].map((item) => (
-                <div key={item} className="group relative overflow-hidden rounded-lg">
-                  <Image
-                    src={`/placeholder.svg?height=400&width=600`}
-                    alt={`Project ${item}`}
-                    width={600}
-                    height={400}
-                    className="aspect-video object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
+              {[1, 2, 3].map((item) => (
+                <div key={item} className="group relative overflow-hidden">
+                  <Image src={`/placeholder.svg?height=400&width=600`} alt={`Project ${item}`} width={600} height={400} className="aspect-video object-cover transition-transform duration-300 group-hover:scale-105"/>
                   <div className="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-80"></div>
                   <div className="absolute inset-0 flex flex-col items-center justify-center p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     <h3 className="text-xl font-bold text-white">Project Title {item}</h3>
                     <p className="mt-2 text-center text-white/80">Web Development</p>
-                    <Button variant="link" className="mt-4 text-[#00f5d5]">
-                      View Project
-                    </Button>
+                    <Button variant="link" className="mt-4 text-[#00f5d5]">View Project</Button>
                   </div>
                 </div>
               ))}
             </div>
             <div className="flex justify-center">
-              <Button className="bg-[#00f5d5] text-[#121212] hover:bg-[#00f5d5]/80">View All Projects</Button>
-            </div>
-          </div>
-        </section>
-
-        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-[#f4f4f4]">
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
-              <div className="flex flex-col justify-center space-y-4">
-                <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-[#00f5d5] px-3 py-1 text-sm text-[#121212] font-medium">
-                    About Us
-                  </div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#121212]">
-                    We're a team of digital experts
-                  </h2>
-                  <p className="max-w-[600px] text-[#121212]/70 md:text-xl/relaxed">
-                    Founded in 2020, forofor has quickly established itself as a leading digital agency. Our team of
-                    designers, developers, and strategists work together to create digital solutions that drive results.
-                  </p>
-                </div>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button className="bg-[#00f5d5] text-[#121212] hover:bg-[#00f5d5]/80">Meet Our Team</Button>
-                  <Button variant="outline" className="border-[#121212] text-[#121212] hover:bg-[#121212]/10">
-                    Our Process
-                  </Button>
-                </div>
-              </div>
-              <div className="flex items-center justify-center">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="overflow-hidden rounded-lg">
-                    <Image
-                      src="/placeholder.svg?height=300&width=300"
-                      alt="Team at work"
-                      width={300}
-                      height={300}
-                      className="aspect-square object-cover"
-                    />
-                  </div>
-                  <div className="overflow-hidden rounded-lg">
-                    <Image
-                      src="/placeholder.svg?height=300&width=300"
-                      alt="Office space"
-                      width={300}
-                      height={300}
-                      className="aspect-square object-cover"
-                    />
-                  </div>
-                  <div className="overflow-hidden rounded-lg">
-                    <Image
-                      src="/placeholder.svg?height=300&width=300"
-                      alt="Team meeting"
-                      width={300}
-                      height={300}
-                      className="aspect-square object-cover"
-                    />
-                  </div>
-                  <div className="overflow-hidden rounded-lg">
-                    <Image
-                      src="/placeholder.svg?height=300&width=300"
-                      alt="Design process"
-                      width={300}
-                      height={300}
-                      className="aspect-square object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
+              <Button className="bg-[#00f5d5] text-[#121212] hover:bg-[#00f5d5]/80 hover:shadow-[0_0_20px_#00f5d5] rounded-none">See What All the Fuss Is About</Button>
             </div>
           </div>
         </section>
@@ -202,13 +166,9 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-[#00f5d5] px-3 py-1 text-sm text-[#121212] font-medium">
-                  Testimonials
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">What Our Clients Say</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Don't just take our word for it. Here's what our clients have to say about working with us.
-                </p>
+                <div className="inline-block bg-[#00f5d5] px-3 py-1 text-sm text-[#121212] font-medium hover:shadow-[0_0_10px_#00f5d5] mb-8">Testimonials</div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Don't Just Take Our Word for It</h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">We could talk all day about what we do—but nothing beats hearing it straight from the people we build for. Here's what our awesome clients have to say about working with us.</p>
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-3">
@@ -232,11 +192,8 @@ export default function Home() {
                     "I've worked with many agencies over the years, but forofor stands out for their creativity, technical expertise, and commitment to delivering exceptional results.",
                 },
               ].map((testimonial, index) => (
-                <div key={index} className="rounded-lg border border-[#f4f4f4]/10 bg-[#121212] p-6 shadow-sm">
+                <div key={index} className="border border-[#00f5d5] bg-[#121212] p-6 shadow-[0_0_10px_#00f5d5] hover:shadow-[0_0_20px_#00f5d5]">
                   <div className="flex items-start space-x-4">
-                    <div className="rounded-full bg-[#00f5d5]/10 p-2">
-                      <MessageSquare className="h-6 w-6 text-[#00f5d5]" />
-                    </div>
                     <div className="space-y-2">
                       <p className="text-[#f4f4f4]/80">"{testimonial.quote}"</p>
                       <div className="pt-4">
@@ -256,21 +213,14 @@ export default function Home() {
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-[#00f5d5] px-3 py-1 text-sm text-[#121212] font-medium">
-                    Contact Us
-                  </div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#121212]">
-                    Let's Start a Project Together
-                  </h2>
-                  <p className="max-w-[600px] text-[#121212]/70 md:text-xl/relaxed">
-                    Ready to take your digital presence to the next level? Get in touch with us today to discuss your
-                    project.
-                  </p>
+                  <div className="inline-block bg-[#00f5d5] px-3 py-1 text-sm text-[#121212] font-medium hover:shadow-[0_0_10px_#00f5d5] mb-8">Contact Us</div>
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#121212]">Ready to Build Something Awesome?</h2>
+                  <p className="max-w-[600px] text-[#121212]/70 md:text-xl/relaxed">Big idea? Tiny idea? Half-baked idea? We're all ears. Slide into our inbox, hit us up by phone, or stalk us on socials (we don't judge).</p>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#00f5d5]/10">
-                      <Mail className="h-5 w-5 text-[#00f5d5]" />
+                    <div className="flex h-10 w-10 items-center justify-center">
+                      <Image src="/logos/FOROFOR_LOGO_-11.svg" alt="Mail Icon" width={240} height={240}/>
                     </div>
                     <div>
                       <p className="text-sm text-[#121212]/60">Email</p>
@@ -278,83 +228,52 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#00f5d5]/10">
-                      <Phone className="h-5 w-5 text-[#00f5d5]" />
+                    <div className="flex h-10 w-10 items-center justify-center">
+                      <Image src="/logos/FOROFOR_LOGO_-11.svg" alt="Phone Icon" width={240} height={240}/>
                     </div>
                     <div>
                       <p className="text-sm text-[#121212]/60">Phone</p>
-                      <p className="font-medium text-[#121212]">+1 (555) 123-4567</p>
+                      <p className="font-medium text-[#121212]">+961 76 134 434</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#00f5d5]/10">
-                      <Zap className="h-5 w-5 text-[#00f5d5]" />
+                    <div className="flex h-10 w-10 items-center justify-center">
+                      <Image src="/logos/FOROFOR_LOGO_-11.svg" alt="Socials Icon" width={240} height={240}/>
                     </div>
                     <div>
                       <p className="text-sm text-[#121212]/60">Social</p>
                       <div className="flex space-x-2">
-                        <Link href="#" className="text-[#121212] hover:text-[#00f5d5]">
-                          Twitter
-                        </Link>
-                        <span>•</span>
-                        <Link href="#" className="text-[#121212] hover:text-[#00f5d5]">
-                          LinkedIn
-                        </Link>
-                        <span>•</span>
-                        <Link href="#" className="text-[#121212] hover:text-[#00f5d5]">
-                          Instagram
-                        </Link>
+                        <Link href="#" className="text-[#121212] hover:text-[#00f5d5]">Instagram</Link>
+                        <span className="text-[#00f5d5]">•</span>
+                        <Link href="#" className="text-[#121212] hover:text-[#00f5d5]">Facebook</Link>
+                        <span className="text-[#00f5d5]">•</span>
+                        <Link href="#" className="text-[#121212] hover:text-[#00f5d5]">LinkedIn</Link>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="rounded-lg border bg-white p-6 shadow-sm">
+              <div className="border border-[#00f5d5] bg-white p-6 shadow-[0_0_10px_#00f5d5]">
                 <form className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <label htmlFor="first-name" className="text-sm font-medium leading-none text-[#121212]">
-                        First name
-                      </label>
-                      <input
-                        id="first-name"
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00f5d5] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="Enter your first name"
-                      />
+                      <label htmlFor="first-name" className="text-sm font-medium leading-none text-[#121212]">First name:</label>
+                      <input id="first-name" className="flex h-10 w-full border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00f5d5] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="John"/>
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="last-name" className="text-sm font-medium leading-none text-[#121212]">
-                        Last name
-                      </label>
-                      <input
-                        id="last-name"
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00f5d5] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="Enter your last name"
-                      />
+                      <label htmlFor="last-name" className="text-sm font-medium leading-none text-[#121212]">Last name</label>
+                      <input id="last-name" className="flex h-10 w-full border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00f5d5] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="Doe"/>
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium leading-none text-[#121212]">
-                      Email
-                    </label>
-                    <input
-                      id="email"
-                      type="email"
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00f5d5] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      placeholder="Enter your email"
-                    />
+                    <label htmlFor="email" className="text-sm font-medium leading-none text-[#121212]">Email</label>
+                    <input id="email" type="email" className="flex h-10 w-full border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00f5d5] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="email@example.com"/>
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium leading-none text-[#121212]">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00f5d5] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      placeholder="Enter your message"
-                    ></textarea>
+                    <label htmlFor="message" className="text-sm font-medium leading-none text-[#121212]">Message</label>
+                    <textarea id="message" className="flex min-h-[120px] w-full border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00f5d5] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="No spam, promise!"></textarea>
                   </div>
-                  <Button className="w-full bg-[#00f5d5] text-[#121212] hover:bg-[#00f5d5]/80">Send Message</Button>
+                  <Button className="w-full bg-[#121212] text-[#f4f4f4] hover:bg-[#00f5d5] hover:text-[#121212] rounded-none">Send Message</Button>
                 </form>
               </div>
             </div>
